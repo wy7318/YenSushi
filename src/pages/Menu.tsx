@@ -6,7 +6,7 @@ const Menu: React.FC = () => {
   const locations = {
     glendale: {
       name: "Glendale",
-      menuUrl: "chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://sak.yensushi.net/wp-content/uploads/2024/05/yen-2024-50624-menu.pdf",
+      menuUrl: "https://jaytpfztifhtzcruxguj.supabase.co/storage/v1/object/public/organization-logos/Menu/yen-2024-50624-menu.pdf",
       image: "https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg"
     },
     scottsdale: {
