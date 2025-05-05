@@ -20,7 +20,7 @@ const LocationCTA: React.FC = () => {
         'Sunday': '12pm – 9:30pm'
       },
       features: ["Traditional Dining Room", "Full-Service Sake Bar", "Private Events Space", "Outdoor Patio"],
-      orderLink: "https://direct.chownow.com/order/27903/locations/41339?add_cn_ordering_class=true"
+      orderLink: "https://yensushi.wehanda.com/"
     },
     scottsdale: {
       title: "Yen Sushi & Revolving Bar",

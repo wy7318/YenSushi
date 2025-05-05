@@ -15,9 +15,8 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose }) 
       description: "Experience traditional Japanese dining in our elegant Glendale location.",
       image: "https://jaytpfztifhtzcruxguj.supabase.co/storage/v1/object/public/Sumiland%20Design/Yen%20Sushi/Glendale%20Store%20Pic.jpg",
       address: "17037 N 43rd Ave #A3, Glendale, AZ 85308",
-      phone: "(602) 978-9022",
-      email: "yensushiandsakebar@gmail.com",
-      type: "contact"
+      reservationLink: "https://yensushi.wehanda.com/",
+      type: "online"
     },
     {
       name: "Yen Sushi & Revolving Bar",

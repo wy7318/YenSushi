@@ -13,7 +13,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose }) => {
       title: "Yen Sushi & Sake Bar",
       address: "17037 N 43rd Ave #A3, Glendale, AZ 85308",
       buttonText: "Order from Glendale",
-      orderLink: "https://direct.chownow.com/order/27903/locations/41339?add_cn_ordering_class=true",
+      orderLink: "https://yensushi.wehanda.com/",
       image: "https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg"
     },
     {
