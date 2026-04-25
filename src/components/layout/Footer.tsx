@@ -21,10 +21,10 @@ const Footer: React.FC = () => {
               Yen Sushi offers an authentic and elevated Japanese dining experience with the freshest ingredients and masterful preparation.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="https://www.instagram.com/yensushiaz/" className="text-gold hover:text-white transition-colors duration-300" aria-label="Instagram">
+              <a href="https://www.instagram.com/yen_sushi_glendale/" className="text-gold hover:text-white transition-colors duration-300" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="https://www.facebook.com/YenSushiSakeBar/" className="text-gold hover:text-white transition-colors duration-300" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61570957492738" className="text-gold hover:text-white transition-colors duration-300" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
 
