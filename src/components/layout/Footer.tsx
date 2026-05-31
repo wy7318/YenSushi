@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
       </div>
       
       <div className="container-custom pt-16 pb-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Column 1: About */}
           <div className="fade-in">
             <Logo />
@@ -62,33 +62,6 @@ const Footer: React.FC = () => {
                   className="text-neutral-300 hover:text-gold transition-colors duration-300"
                 >
                   yensushiandsakebar@gmail.com
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          {/* Column 3: Scottsdale Location */}
-          <div className="fade-in">
-            <h3 className="text-lg font-display text-gold mb-6">Scottsdale</h3>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-2">
-                <MapPin size={20} className="text-gold flex-shrink-0 mt-1" />
-                <a 
-                  href="https://www.google.com/maps/dir/?api=1&destination=15801+N+Frank+Lloyd+Wright+Blvd%2C+Scottsdale%2C+AZ+85260"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-300 hover:text-gold transition-colors duration-300"
-                >
-                  15801 N Frank Lloyd Wright Blvd, Scottsdale, AZ 85260
-                </a>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Phone size={20} className="text-gold flex-shrink-0" />
-                <a 
-                  href="tel:(480) 661-1188"
-                  className="text-neutral-300 hover:text-gold transition-colors duration-300"
-                >
-                  (480) 661-1188
                 </a>
               </div>
             </div>

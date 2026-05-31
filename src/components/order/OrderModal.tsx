@@ -15,13 +15,6 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose }) => {
       buttonText: "Order from Glendale",
       orderLink: "https://yensushi.wehanda.com/",
       image: "https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg"
-    },
-    {
-      title: "Yen Sushi & Revolving Bar",
-      address: "15801 N Frank Lloyd Wright Blvd, Scottsdale, AZ 85260",
-      buttonText: "Order from Scottsdale",
-      orderLink: "https://yensushirevolving.wehanda.com/",
-      image: "https://jaytpfztifhtzcruxguj.supabase.co/storage/v1/object/public/Sumiland%20Design/Yen%20Sushi/revolving.jpg"
     }
   ];
 
@@ -43,7 +36,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Location Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="max-w-md mx-auto">
             {locations.map((location, index) => (
               <div 
                 key={index}

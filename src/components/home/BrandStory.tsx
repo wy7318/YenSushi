@@ -59,7 +59,7 @@ const BrandStory: React.FC = () => {
                 </p>
                 
                 <p>
-                  From our cozy kitchen in Glendale, where we first welcomed guests with hand-crafted rolls and heartfelt hospitality, to our vibrant Scottsdale location featuring a revolving sushi bar that brings the experience right to your table — every plate we serve carries the spirit of tradition and innovation.
+                  From our cozy kitchen in Glendale, where we first welcomed guests with hand-crafted rolls and heartfelt hospitality — every plate we serve carries the spirit of tradition and innovation.
                 </p>
                 
                 <p>

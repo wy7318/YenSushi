@@ -8,11 +8,6 @@ const Menu: React.FC = () => {
       name: "Glendale",
       menuUrl: "https://jaytpfztifhtzcruxguj.supabase.co/storage/v1/object/public/organization-logos/Menu/yen-2024-50624-menu.pdf",
       image: "https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg"
-    },
-    scottsdale: {
-      name: "Scottsdale",
-      menuUrl: "https://jaytpfztifhtzcruxguj.supabase.co/storage/v1/object/public/organization-logos/Menu/Menu%20Combined%20Revolving.pdf",
-      image: "https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg"
     }
   };
 
@@ -28,11 +23,11 @@ const Menu: React.FC = () => {
               Our <span className="text-gold">Menu</span>
             </h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Select a location to view its menu
+              Click below to view our menu
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="max-w-md mx-auto">
             {Object.entries(locations).map(([key, location]) => (
               <div 
                 key={key}

@@ -17,15 +17,6 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose }) 
       address: "17037 N 43rd Ave #A3, Glendale, AZ 85308",
       reservationLink: "https://yensushi.wehanda.com/",
       type: "online"
-    },
-    {
-      name: "Yen Sushi & Revolving Bar",
-      subtitle: "Scottsdale",
-      description: "Experience our innovative revolving sushi bar in Scottsdale.",
-      image: "https://jaytpfztifhtzcruxguj.supabase.co/storage/v1/object/public/Sumiland%20Design/Yen%20Sushi/Scottsdale%20Store%20Pic%20(1).jpg",
-      address: "15801 N Frank Lloyd Wright Blvd, Scottsdale, AZ 85260",
-      reservationLink: "https://yensushirevolving.wehanda.com/",
-      type: "online"
     }
   ];
 
@@ -47,7 +38,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose }) 
           </div>
 
           {/* Location Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="max-w-md mx-auto">
             {locations.map((location, index) => (
               <div 
                 key={index}
