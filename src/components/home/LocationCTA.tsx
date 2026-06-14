@@ -20,7 +20,7 @@ const LocationCTA: React.FC = () => {
         'Sunday': '12pm – 9:30pm'
       },
       features: ["Traditional Dining Room", "Full-Service Sake Bar", "Private Events Space", "Outdoor Patio"],
-      orderLink: "https://yensushi.wehanda.com/"
+      orderLink: "https://www.wehanda.com/restaurant/yen-sushi-sake-bar/menu"
     },
   };
 
