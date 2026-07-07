@@ -1,10 +1,9 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { handleScrollAnimations } from '../../utils/animations';
-import OrderModal from '../order/OrderModal';
 
 const BrandStory: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -71,54 +70,29 @@ const BrandStory: React.FC = () => {
                 </p>
               </div>
               
-              <button 
-                onClick={() => setIsOrderModalOpen(true)}
+              <Link
+                to="/order"
                 className="mt-8 bg-gold text-charcoal px-8 py-4 hover:bg-primary-400 transition-colors duration-300 group flex items-center"
               >
                 Crave It? Get It.
                 <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
-              </button>
+              </Link>
             </div>
           </div>
           
-          {/* Right Column - Images */}
+          {/* Right Column - Image */}
           <div className="relative h-full">
-            <div className="grid grid-cols-2 gap-4 h-full">
-              {/* Image 1 */}
-              <div className="fade-in aspect-[3/4] overflow-hidden">
-                <img 
-                  src="https://images.pexels.com/photos/2323398/pexels-photo-2323398.jpeg?auto=compress&cs=tinysrgb&w=1600" 
-                  alt="Sushi preparation" 
-                  className="w-full h-full object-cover hover-scale"
-                />
-              </div>
-              
-              {/* Image 2 */}
-              <div className="fade-in mt-12 aspect-[3/4] overflow-hidden">
-                <img 
-                  src="https://jaytpfztifhtzcruxguj.supabase.co/storage/v1/object/public/Sumiland%20Design/Yen%20Sushi/glendale%20Sake%20bomb.png" 
-                  alt="Elegant plating" 
-                  className="w-full h-full object-cover hover-scale"
-                />
-              </div>
-              
-              {/* Image 3 */}
-              <div className="fade-in col-span-2 mt-4 aspect-[16/9] overflow-hidden">
-                <img 
-                  src="https://jaytpfztifhtzcruxguj.supabase.co/storage/v1/object/public/Sumiland%20Design/Yen%20Sushi/food.jpg" 
-                  alt="Restaurant interior" 
-                  className="w-full h-full object-cover hover-scale"
-                />
-              </div>
+            <div className="fade-in aspect-[3/4] overflow-hidden">
+              <img
+                src="https://images.pexels.com/photos/2323398/pexels-photo-2323398.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="Sushi preparation"
+                className="w-full h-full object-cover hover-scale"
+              />
             </div>
           </div>
         </div>
       </div>
 
-      <OrderModal 
-        isOpen={isOrderModalOpen}
-        onClose={() => setIsOrderModalOpen(false)}
-      />
     </section>
   );
 };

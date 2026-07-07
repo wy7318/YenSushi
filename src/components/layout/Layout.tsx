@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import { initAnimations } from '../../utils/animations';
@@ -8,6 +9,8 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const location = useLocation();
+
   useEffect(() => {
     // Initialize animations when component mounts
     initAnimations();
@@ -17,12 +20,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div>
       <Header />
-      <main className="flex-grow">
+      <main>
         {children}
       </main>
-      <Footer />
+      {location.pathname !== '/order' && <Footer />}
     </div>
   );
 };

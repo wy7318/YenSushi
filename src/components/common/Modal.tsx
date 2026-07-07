@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { X } from 'lucide-react';
 
 interface ModalProps {
   isOpen: boolean;
@@ -49,11 +50,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
           className="absolute right-4 top-4 text-neutral-400 hover:text-gold transition-colors duration-300 z-20 bg-white/80 backdrop-blur-sm rounded-full p-1"
           aria-label="Close modal"
         >
-          <img 
-            src="https://jaytpfztifhtzcruxguj.supabase.co/storage/v1/object/public/organization-logos/logos/logo.png"
-            alt="Close"
-            className="w-6 h-6 object-contain"
-          />
+          <X size={20} />
         </button>
         {children}
       </div>

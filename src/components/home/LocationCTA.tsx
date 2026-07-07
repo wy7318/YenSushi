@@ -9,7 +9,7 @@ const LocationCTA: React.FC = () => {
       title: "Yen Sushi & Sake Bar",
       subtitle: "Glendale",
       description: "Experience the art of traditional Japanese dining in our elegant Glendale location. Featuring intimate booth seating, a full-service sake bar, and a serene atmosphere perfect for both casual dining and special occasions.",
-      image: "https://jaytpfztifhtzcruxguj.supabase.co/storage/v1/object/public/Sumiland%20Design/Yen%20Sushi/Glendale%20Store%20Pic.jpg",
+      image: "/glendale-store.jpg",
       address: "17037 N 43rd Ave #A3, Glendale, AZ 85308",
       phone: "(602) 978-9022",
       email: "yensushiandsakebar@gmail.com",
