@@ -18,6 +18,11 @@ const Header: React.FC = () => {
         setIsScrolled(false);
       }
 
+      if (window.scrollY < 80 && window.location.pathname === '/') {
+        setActiveItem('home');
+        return;
+      }
+
       const sections = document.querySelectorAll('section[id]');
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
@@ -31,6 +36,13 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Reset active item to 'home' whenever we navigate to the home page
+  useEffect(() => {
+    if (location.pathname === '/') {
+      setActiveItem('home');
+    }
+  }, [location.pathname]);
 
   const menuItems = [
     { name: 'Home', path: '/' },
@@ -141,8 +153,8 @@ const Header: React.FC = () => {
           </ul>
         </nav>
 
-        {/* Order Now Button - Desktop */}
-        <div className="hidden md:block">
+        {/* Order Now Button - Desktop (hidden on the /order page itself) */}
+        <div className={location.pathname === '/order' ? 'invisible md:block' : 'hidden md:block'}>
           <Link
             to="/order"
             className="
@@ -228,21 +240,23 @@ const Header: React.FC = () => {
               </button>
             </li>
 
-            <li className="pt-4">
-              <Link
-                to="/order"
-                onClick={() => setIsMenuOpen(false)}
-                className="
-                  block w-full bg-gold text-charcoal
-                  py-4 px-6 text-center
-                  font-medium tracking-wide
-                  transition-all duration-300
-                  hover:bg-white hover:text-gold
-                "
-              >
-                Order Now
-              </Link>
-            </li>
+            {location.pathname !== '/order' && (
+              <li className="pt-4">
+                <Link
+                  to="/order"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="
+                    block w-full bg-gold text-charcoal
+                    py-4 px-6 text-center
+                    font-medium tracking-wide
+                    transition-all duration-300
+                    hover:bg-white hover:text-gold
+                  "
+                >
+                  Order Now
+                </Link>
+              </li>
+            )}
           </ul>
         </nav>
       </div>
