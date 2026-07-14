@@ -7,7 +7,7 @@ const Order: React.FC = () => {
     // Replace the existing embed.js script element with a fresh clone.
     // This forces re-execution AFTER the data-wehanda-embed div is in the DOM,
     // which is required for Wehanda's one-time DOM scan to find the widget.
-    const existing = document.querySelector<HTMLScriptElement>('script[src="https://wehanda.com/embed.js"]');
+    const existing = document.querySelector<HTMLScriptElement>('script[src="https://www.wehanda.com/embed.js"]');
     if (existing && existing.parentNode) {
       const clone = document.createElement('script');
       clone.src = existing.src;
@@ -15,7 +15,7 @@ const Order: React.FC = () => {
       existing.parentNode.replaceChild(clone, existing);
     } else {
       const script = document.createElement('script');
-      script.src = 'https://wehanda.com/embed.js';
+      script.src = 'https://www.wehanda.com/embed.js';
       script.async = true;
       document.body.appendChild(script);
     }

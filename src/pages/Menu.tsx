@@ -1,32 +1,23 @@
 import React, { useEffect } from 'react';
 
+const EMBED_SRC = 'https://www.wehanda.com/embed.js';
+
 const Menu: React.FC = () => {
   useEffect(() => {
+    // The SPA renders the embed div after initial page load, so the script must be
+    // (re)loaded at runtime once the div exists — always from Wehanda's URL, never bundled.
+    document
+      .querySelectorAll(`script[src="${EMBED_SRC}"]`)
+      .forEach((s) => s.parentNode?.removeChild(s));
     const script = document.createElement('script');
-    script.src = 'https://wehanda.com/embed.js';
+    script.src = EMBED_SRC;
     script.async = true;
     document.body.appendChild(script);
-    return () => {
-      if (script.parentNode) script.parentNode.removeChild(script);
-    };
   }, []);
 
   return (
-    <div className="min-h-screen bg-charcoal">
-      {/* Spacer for fixed navbar */}
-      <div className="h-40"></div>
-
-      <section className="py-16">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h1 className="font-display text-5xl text-white mb-6">
-              Our <span className="text-gold">Menu</span>
-            </h1>
-          </div>
-
-          <div data-wehanda-embed="" data-restaurant="yen-sushi-sake-bar"></div>
-        </div>
-      </section>
+    <div className="pt-20">
+      <div data-wehanda-embed="" data-restaurant="yen-sushi-sake-bar" data-view="menu"></div>
     </div>
   );
 };

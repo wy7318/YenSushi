@@ -47,7 +47,7 @@ const Header: React.FC = () => {
   const menuItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/#story' },
-    { name: 'Menu', path: '/order' },
+    { name: 'Menu', path: '/menu' },
   ];
 
   const handleNavigation = (item: { name: string; path?: string; action?: () => void }) => {
